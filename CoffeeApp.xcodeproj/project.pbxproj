@@ -13,6 +13,8 @@
 		A503E1B129EA15590046CE68 /* ConfirmationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503E1B029EA15590046CE68 /* ConfirmationPageViewController.swift */; };
 		A503E1B529EA6FB80046CE68 /* forgotPassword.json in Resources */ = {isa = PBXBuildFile; fileRef = A503E1B429EA6FB80046CE68 /* forgotPassword.json */; };
 		A503E1B729EA71650046CE68 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503E1B629EA71650046CE68 /* ResetPasswordViewController.swift */; };
+		A528370529EACC43000EA1BC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A528370429EACC43000EA1BC /* SnapKit */; };
+		A528370929EB082D000EA1BC /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528370829EB082D000EA1BC /* SideMenuTableViewCell.swift */; };
 		A55BCDF329E6F71F00ECB1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BCDF229E6F71F00ECB1B2 /* AppDelegate.swift */; };
 		A55BCDF529E6F71F00ECB1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BCDF429E6F71F00ECB1B2 /* SceneDelegate.swift */; };
 		A55BCDFA29E6F71F00ECB1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55BCDF829E6F71F00ECB1B2 /* Main.storyboard */; };
@@ -47,6 +49,7 @@
 		A503E1B029EA15590046CE68 /* ConfirmationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPageViewController.swift; sourceTree = "<group>"; };
 		A503E1B429EA6FB80046CE68 /* forgotPassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forgotPassword.json; sourceTree = "<group>"; };
 		A503E1B629EA71650046CE68 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		A528370829EB082D000EA1BC /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		A55BCDEF29E6F71F00ECB1B2 /* CoffeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55BCDF229E6F71F00ECB1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55BCDF429E6F71F00ECB1B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 				A5CEFDB929E978B400317760 /* FirebaseAnalytics in Frameworks */,
 				A5CEFDBD29E978B400317760 /* FirebaseAuth in Frameworks */,
 				A5CEFDBF29E978B400317760 /* FirebaseDatabase in Frameworks */,
+				A528370529EACC43000EA1BC /* SnapKit in Frameworks */,
 				A5CEFDC129E978B400317760 /* FirebaseFirestore in Frameworks */,
 				A5CEFDBB29E978B400317760 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A503E1AF29EA11470046CE68 /* Lottie in Frameworks */,
@@ -170,17 +174,18 @@
 				A5A850CD29E85CCC00EBA906 /* Welcome */,
 				A5A850CC29E85C6B00EBA906 /* Login SignUp */,
 				A5A850CB29E85C5D00EBA906 /* MainTabBarController */,
-				A55BCE1529E70DB200ECB1B2 /* Cell */,
+				A55BCE1529E70DB200ECB1B2 /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		A55BCE1529E70DB200ECB1B2 /* Cell */ = {
+		A55BCE1529E70DB200ECB1B2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				A55BCE1629E70DC600ECB1B2 /* OnboardCollectionViewCell.swift */,
+				A528370829EB082D000EA1BC /* SideMenuTableViewCell.swift */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A55BCE1829E71B2300ECB1B2 /* Fonts */ = {
@@ -274,6 +279,7 @@
 				A5CEFDBE29E978B400317760 /* FirebaseDatabase */,
 				A5CEFDC029E978B400317760 /* FirebaseFirestore */,
 				A503E1AE29EA11470046CE68 /* Lottie */,
+				A528370429EACC43000EA1BC /* SnapKit */,
 			);
 			productName = CoffeeApp;
 			productReference = A55BCDEF29E6F71F00ECB1B2 /* CoffeeApp.app */;
@@ -306,6 +312,7 @@
 			packageReferences = (
 				A5CEFDB729E978B400317760 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A503E1AD29EA11470046CE68 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A528370329EACC43000EA1BC /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = A55BCDF029E6F71F00ECB1B2 /* Products */;
 			projectDirPath = "";
@@ -343,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A528370929EB082D000EA1BC /* SideMenuTableViewCell.swift in Sources */,
 				A55BCE2629E72C7F00ECB1B2 /* RegisterViewController.swift in Sources */,
 				A55BCE1429E6FE6F00ECB1B2 /* LoadScreenViewController.swift in Sources */,
 				A503E1B129EA15590046CE68 /* ConfirmationPageViewController.swift in Sources */,
@@ -596,6 +604,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		A528370329EACC43000EA1BC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		A5CEFDB729E978B400317760 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -611,6 +627,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A503E1AD29EA11470046CE68 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		A528370429EACC43000EA1BC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A528370329EACC43000EA1BC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		A5CEFDB829E978B400317760 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

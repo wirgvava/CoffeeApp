@@ -52,12 +52,19 @@ class ProfileViewController: UIViewController {
         emailLabel.text = user.email ?? ""
         
         ref.getDocuments { result, error in
-            for document in result!.documents {
-                let data = document.data()
-                let name = data["firstName"]!
-                let lastname = data["lastName"]!
-                self.nameLastnameLabel.text = "\(name) \(lastname)"
+            
+            let userDoc = result?.documents
+            
+            if let userDoc = userDoc {
+                for document in userDoc {
+                    let data = document.data()
+                    let name = data["firstName"]!
+                    let lastname = data["lastName"]!
+                    self.nameLastnameLabel.text = "\(name) \(lastname)"
+                }
             }
+            
+            
         }
     }
  
