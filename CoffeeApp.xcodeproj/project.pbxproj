@@ -13,8 +13,9 @@
 		A503E1B129EA15590046CE68 /* ConfirmationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503E1B029EA15590046CE68 /* ConfirmationPageViewController.swift */; };
 		A503E1B529EA6FB80046CE68 /* forgotPassword.json in Resources */ = {isa = PBXBuildFile; fileRef = A503E1B429EA6FB80046CE68 /* forgotPassword.json */; };
 		A503E1B729EA71650046CE68 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503E1B629EA71650046CE68 /* ResetPasswordViewController.swift */; };
+		A51AB9AB29ED95FC00EE041F /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A51AB9AA29ED95FC00EE041F /* CollectionViewPagingLayout */; };
+		A51AB9B129EDC24600EE041F /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AB9B029EDC24600EE041F /* SideMenuTableViewCell.swift */; };
 		A528370529EACC43000EA1BC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A528370429EACC43000EA1BC /* SnapKit */; };
-		A528370929EB082D000EA1BC /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528370829EB082D000EA1BC /* SideMenuTableViewCell.swift */; };
 		A55BCDF329E6F71F00ECB1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BCDF229E6F71F00ECB1B2 /* AppDelegate.swift */; };
 		A55BCDF529E6F71F00ECB1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BCDF429E6F71F00ECB1B2 /* SceneDelegate.swift */; };
 		A55BCDFA29E6F71F00ECB1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55BCDF829E6F71F00ECB1B2 /* Main.storyboard */; };
@@ -41,6 +42,8 @@
 		A5CEFDBF29E978B400317760 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A5CEFDBE29E978B400317760 /* FirebaseDatabase */; };
 		A5CEFDC129E978B400317760 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A5CEFDC029E978B400317760 /* FirebaseFirestore */; };
 		A5CEFDC329E99D2400317760 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CEFDC229E99D2400317760 /* UIView+Extensions.swift */; };
+		A5E925E529EBF01800752B4C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E925E429EBF01800752B4C /* SideMenuViewController.swift */; };
+		A5E925E729EBF0D400752B4C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E925E629EBF0D400752B4C /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +52,7 @@
 		A503E1B029EA15590046CE68 /* ConfirmationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPageViewController.swift; sourceTree = "<group>"; };
 		A503E1B429EA6FB80046CE68 /* forgotPassword.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forgotPassword.json; sourceTree = "<group>"; };
 		A503E1B629EA71650046CE68 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		A528370829EB082D000EA1BC /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		A51AB9B029EDC24600EE041F /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		A55BCDEF29E6F71F00ECB1B2 /* CoffeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55BCDF229E6F71F00ECB1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55BCDF429E6F71F00ECB1B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 		A5A850CF29E85D7A00EBA906 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		A5CEFDB529E9762700317760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5CEFDC229E99D2400317760 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		A5E925E429EBF01800752B4C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		A5E925E629EBF0D400752B4C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,7 @@
 				A5CEFDBF29E978B400317760 /* FirebaseDatabase in Frameworks */,
 				A528370529EACC43000EA1BC /* SnapKit in Frameworks */,
 				A5CEFDC129E978B400317760 /* FirebaseFirestore in Frameworks */,
+				A51AB9AB29ED95FC00EE041F /* CollectionViewPagingLayout in Frameworks */,
 				A5CEFDBB29E978B400317760 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A503E1AF29EA11470046CE68 /* Lottie in Frameworks */,
 			);
@@ -108,6 +114,14 @@
 				A503E1B429EA6FB80046CE68 /* forgotPassword.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		A523E64429EBEBB400E3D6EE /* HomePageCells */ = {
+			isa = PBXGroup;
+			children = (
+				A51AB9B029EDC24600EE041F /* SideMenuTableViewCell.swift */,
+			);
+			path = HomePageCells;
 			sourceTree = "<group>";
 		};
 		A55BCDE629E6F71F00ECB1B2 = {
@@ -182,8 +196,8 @@
 		A55BCE1529E70DB200ECB1B2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A523E64429EBEBB400E3D6EE /* HomePageCells */,
 				A55BCE1629E70DC600ECB1B2 /* OnboardCollectionViewCell.swift */,
-				A528370829EB082D000EA1BC /* SideMenuTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -215,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				A5CEFDC229E99D2400317760 /* UIView+Extensions.swift */,
+				A5E925E629EBF0D400752B4C /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				A55BCE0E29E6FDE100ECB1B2 /* HomeViewController.swift */,
+				A5E925E429EBF01800752B4C /* SideMenuViewController.swift */,
 				A55BCE1029E6FE2200ECB1B2 /* ProfileViewController.swift */,
 			);
 			path = MainTabBarController;
@@ -280,6 +296,7 @@
 				A5CEFDC029E978B400317760 /* FirebaseFirestore */,
 				A503E1AE29EA11470046CE68 /* Lottie */,
 				A528370429EACC43000EA1BC /* SnapKit */,
+				A51AB9AA29ED95FC00EE041F /* CollectionViewPagingLayout */,
 			);
 			productName = CoffeeApp;
 			productReference = A55BCDEF29E6F71F00ECB1B2 /* CoffeeApp.app */;
@@ -313,6 +330,7 @@
 				A5CEFDB729E978B400317760 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A503E1AD29EA11470046CE68 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A528370329EACC43000EA1BC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A51AB9A929ED95FC00EE041F /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
 			);
 			productRefGroup = A55BCDF029E6F71F00ECB1B2 /* Products */;
 			projectDirPath = "";
@@ -350,9 +368,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A528370929EB082D000EA1BC /* SideMenuTableViewCell.swift in Sources */,
+				A5E925E529EBF01800752B4C /* SideMenuViewController.swift in Sources */,
 				A55BCE2629E72C7F00ECB1B2 /* RegisterViewController.swift in Sources */,
 				A55BCE1429E6FE6F00ECB1B2 /* LoadScreenViewController.swift in Sources */,
+				A5E925E729EBF0D400752B4C /* UIViewController+Extension.swift in Sources */,
 				A503E1B129EA15590046CE68 /* ConfirmationPageViewController.swift in Sources */,
 				A55BCE1129E6FE2200ECB1B2 /* ProfileViewController.swift in Sources */,
 				A55BCE0F29E6FDE100ECB1B2 /* HomeViewController.swift in Sources */,
@@ -365,6 +384,7 @@
 				A55BCDF529E6F71F00ECB1B2 /* SceneDelegate.swift in Sources */,
 				A5CEFDC329E99D2400317760 /* UIView+Extensions.swift in Sources */,
 				A503E1B729EA71650046CE68 /* ResetPasswordViewController.swift in Sources */,
+				A51AB9B129EDC24600EE041F /* SideMenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +624,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		A51AB9A929ED95FC00EE041F /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		A528370329EACC43000EA1BC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -627,6 +655,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A503E1AD29EA11470046CE68 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		A51AB9AA29ED95FC00EE041F /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A51AB9A929ED95FC00EE041F /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
 		};
 		A528370429EACC43000EA1BC /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
