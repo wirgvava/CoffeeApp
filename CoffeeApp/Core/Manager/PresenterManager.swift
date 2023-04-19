@@ -14,9 +14,10 @@ class PresenterManager {
    
     enum VC {
         case mainTabBarController
-        case onboardingViewController
+        case onboarding
         case emailConfirmPage
         case resetPasswordPage
+        case orderPage
     }
 
     func navigate(to vc: VC){
@@ -25,12 +26,14 @@ class PresenterManager {
         switch vc {
         case .mainTabBarController:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBarController")
-        case .onboardingViewController:
+        case .onboarding:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "onboardingViewController")
         case .emailConfirmPage:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "confirmationPageViewController")
         case .resetPasswordPage:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "resetPasswordViewController")
+        case .orderPage:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "orderViewController")
         }
        
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,

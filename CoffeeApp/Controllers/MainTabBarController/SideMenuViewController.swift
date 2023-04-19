@@ -9,21 +9,13 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
      
-    // MARK: - Constants & Variables
+    // MARK: - Constants
     let background = UIView()
     let handler = UIImageView()
     let dragOutButton = UIButton(type: .system)
     let dragInButton = UIButton(type: .system)
     let titleLabel = UILabel()
     let tableView = UITableView()
-    
-    var drinks = [(image: UIImage(named: "CheescakeFrappuccino with BG"), name: "Cheescake \nFrappuccino"),
-                  (image: UIImage(named: "StrawberryLatte with BG"), name: "Strawberry \nLatte"),
-                  (image: UIImage(named: "CaramelFrappucino with BG"), name: "Caramel \nFrappuccino"),
-                  (image: UIImage(named: "CheescakeFrappuccino with BG"), name: "Cheescake \nFrappuccino"),
-                  (image: UIImage(named: "StrawberryLatte with BG"), name: "Strawberry \nLatte"),
-                  (image: UIImage(named: "CaramelFrappucino with BG"), name: "Caramel \nFrappuccino")]
-
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -137,13 +129,13 @@ class SideMenuViewController: UIViewController {
 // MARK: - TableView
 extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drinks.count
+        return DataManager.shared.sideMenuDrinks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "sideMenuCell", for: indexPath) as! SideMenuTableViewCell
         let contentView = cell.contentView
-        let drink = drinks[indexPath.row]
+        let drinks = DataManager.shared.sideMenuDrinks[indexPath.row]
         cell.frame.size = CGSize(width: tableView.frame.width, height: 252)
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
@@ -151,8 +143,8 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
             cell.setNameOfDrink(contentView: contentView)
             cell.setImageOfDrink(contentView: contentView)
         }
-        cell.imageOfDrink.image = drink.image
-        cell.nameOfDrink.text = drink.name
+        cell.imageOfDrink.image = drinks.image
+        cell.nameOfDrink.text = drinks.name
         
         return cell
     }

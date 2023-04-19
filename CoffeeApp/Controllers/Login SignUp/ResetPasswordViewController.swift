@@ -37,7 +37,7 @@ class ResetPasswordViewController: UIViewController {
     }
     
     @IBAction func didTappedGotoLoginPageButton(_ sender: UIButton){
-        PresenterManager.shared.navigate(to: .onboardingViewController)
+        PresenterManager.shared.navigate(to: .onboarding)
     }
     
     // MARK: - Methods

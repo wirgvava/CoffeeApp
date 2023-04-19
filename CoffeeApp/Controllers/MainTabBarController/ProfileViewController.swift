@@ -38,7 +38,7 @@ class ProfileViewController: UIViewController {
         }
 
         UserDefaults.standard.set(false, forKey: "userIsLoggedIn")
-        PresenterManager.shared.navigate(to: .onboardingViewController)
+        PresenterManager.shared.navigate(to: .onboarding)
     }
     
     
