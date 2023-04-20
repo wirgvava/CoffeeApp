@@ -17,8 +17,7 @@
 		A51AB9B129EDC24600EE041F /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AB9B029EDC24600EE041F /* SideMenuTableViewCell.swift */; };
 		A51AB9B329EDEA0F00EE041F /* HomeMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AB9B229EDEA0F00EE041F /* HomeMainCollectionViewCell.swift */; };
 		A528370529EACC43000EA1BC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A528370429EACC43000EA1BC /* SnapKit */; };
-		A53A680329F0680B007CCB40 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A680229F0680B007CCB40 /* OrderViewController.swift */; };
-		A53A680529F06847007CCB40 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A680429F06847007CCB40 /* SheetViewController.swift */; };
+		A53A680329F0680B007CCB40 /* OrderSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A680229F0680B007CCB40 /* OrderSheetViewController.swift */; };
 		A55BCDF329E6F71F00ECB1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BCDF229E6F71F00ECB1B2 /* AppDelegate.swift */; };
 		A55BCDF529E6F71F00ECB1B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BCDF429E6F71F00ECB1B2 /* SceneDelegate.swift */; };
 		A55BCDFA29E6F71F00ECB1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55BCDF829E6F71F00ECB1B2 /* Main.storyboard */; };
@@ -60,8 +59,7 @@
 		A503E1B629EA71650046CE68 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		A51AB9B029EDC24600EE041F /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		A51AB9B229EDEA0F00EE041F /* HomeMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainCollectionViewCell.swift; sourceTree = "<group>"; };
-		A53A680229F0680B007CCB40 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
-		A53A680429F06847007CCB40 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		A53A680229F0680B007CCB40 /* OrderSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetViewController.swift; sourceTree = "<group>"; };
 		A55BCDEF29E6F71F00ECB1B2 /* CoffeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55BCDF229E6F71F00ECB1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55BCDF429E6F71F00ECB1B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -255,8 +253,7 @@
 				A5E925E429EBF01800752B4C /* SideMenuViewController.swift */,
 				A55BCE0E29E6FDE100ECB1B2 /* HomeViewController.swift */,
 				A55BCE1029E6FE2200ECB1B2 /* ProfileViewController.swift */,
-				A53A680229F0680B007CCB40 /* OrderViewController.swift */,
-				A53A680429F06847007CCB40 /* SheetViewController.swift */,
+				A53A680229F0680B007CCB40 /* OrderSheetViewController.swift */,
 			);
 			path = MainTabBarController;
 			sourceTree = "<group>";
@@ -392,11 +389,10 @@
 				A55BCE1429E6FE6F00ECB1B2 /* LoadScreenViewController.swift in Sources */,
 				A5E925E729EBF0D400752B4C /* UIViewController+Extension.swift in Sources */,
 				A503E1B129EA15590046CE68 /* ConfirmationPageViewController.swift in Sources */,
-				A53A680529F06847007CCB40 /* SheetViewController.swift in Sources */,
 				A55BCE1129E6FE2200ECB1B2 /* ProfileViewController.swift in Sources */,
 				A55BCE0F29E6FDE100ECB1B2 /* HomeViewController.swift in Sources */,
 				A503E1A929E9FE5A0046CE68 /* Validators.swift in Sources */,
-				A53A680329F0680B007CCB40 /* OrderViewController.swift in Sources */,
+				A53A680329F0680B007CCB40 /* OrderSheetViewController.swift in Sources */,
 				A55BCE0D29E6FD8D00ECB1B2 /* LoginViewController.swift in Sources */,
 				A5B4109429EEE98C00A2B542 /* DataManager.swift in Sources */,
 				A5B4109029EEE5ED00A2B542 /* SwitchButtons.swift in Sources */,
@@ -558,7 +554,7 @@
 				DEVELOPMENT_TEAM = NW6K64987Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeeApp/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "View controller-based status bar appearance";
+				INFOPLIST_KEY_CFBundleDisplayName = Koffy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -578,7 +574,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -592,7 +588,7 @@
 				DEVELOPMENT_TEAM = NW6K64987Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeeApp/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "View controller-based status bar appearance";
+				INFOPLIST_KEY_CFBundleDisplayName = Koffy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -612,7 +608,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

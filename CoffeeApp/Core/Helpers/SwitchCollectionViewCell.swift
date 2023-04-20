@@ -14,14 +14,14 @@ class SwitchCollectionViewCell {
         case frappuccino
         case hotTea
         
-        var cell: [(image: UIImage?, name: String)] {
+        var cell: [(image: UIImage?, name: String, price: String)] {
             switch self {
             case .hotCoffee:
-                return DataManager.shared.mainHotCoffees
+                return DataManager.shared.hotCoffees
             case .frappuccino:
-                return DataManager.shared.mainFrappuccinos
+                return DataManager.shared.frappuccinos
             case .hotTea:
-                return DataManager.shared.mainHotTeas
+                return DataManager.shared.hotTeas
             }
         }
     }

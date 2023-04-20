@@ -19,15 +19,11 @@ class HomeMainCollectionViewCell: UICollectionViewCell {
         setup()
         setupImage()
         setupNameOfDricnk()
-//        PresenterManager.shared.navigate(to: .orderPage)
-
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
-        setupImage()
-        setupNameOfDricnk()
+        
     }
 
     func setup() {
@@ -56,7 +52,6 @@ class HomeMainCollectionViewCell: UICollectionViewCell {
         name.frame = CGRect(x: 20, y: (self.card.frame.height) + 50, width: self.frame.width, height: 100)
         card.addSubview(name)
     }
-    
     
 }
 

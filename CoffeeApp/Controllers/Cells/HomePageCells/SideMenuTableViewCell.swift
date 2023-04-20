@@ -20,6 +20,7 @@ class SideMenuTableViewCell: UITableViewCell {
         setNameOfDrink(contentView: contentView)
         setImageOfDrink(contentView: contentView)
     }
+    
 
 
     func setNameOfDrink(contentView: UIView){
@@ -34,11 +35,10 @@ class SideMenuTableViewCell: UITableViewCell {
     
 //    func setBackgroundForCell(contentView: UIView){
 //        let frame = CGRect(x: (contentView.frame.width - 122) / 2, y: (contentView.frame.height) - (nameOfDrink.frame.height) - 151, width: 122, height: 137)
-//        cellBackground.image = UIImage(named: "brownBackground")
+//        cellBackground.image = UIImage(named: "creamBackground")
 //        cellBackground.center = contentView.center
 //        cellBackground.frame = frame
 //        contentView.addSubview(self.cellBackground)
-//
 //    }
     
     func setImageOfDrink(contentView: UIView){

@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var nameLastnameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var avatar: UIImageView!
     
     // MARK: - View Life Cycle
    override func viewDidLoad() {
@@ -60,7 +61,7 @@ class ProfileViewController: UIViewController {
                     let data = document.data()
                     let name = data["firstName"]!
                     let lastname = data["lastName"]!
-                    self.nameLastnameLabel.text = "\(name) \(lastname)"
+                    self.nameLastnameLabel.text = "\(name) \n\(lastname)"
                 }
             }
             

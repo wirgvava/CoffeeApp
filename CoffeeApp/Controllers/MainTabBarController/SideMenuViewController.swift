@@ -23,37 +23,18 @@ class SideMenuViewController: UIViewController {
         setHandeler()
         setDragOutButton()
         setupGestures()
-        dragOutButton.addTarget(self, action: #selector(dragOutMenu(_:)), for: .touchDragOutside)
-        dragInButton.addTarget(self, action: #selector(dragInMenu(_:)), for: .touchDragInside)
+        dragOutButton.addTarget(self, action: #selector(didTappedDragOutMenu(_:)), for: .touchDragOutside)
+        dragInButton.addTarget(self, action: #selector(didTappedDragInMenu(_:)), for: .touchDragInside)
         overrideUserInterfaceStyle = .light
     }
     
     // MARK: - Actions
-    @objc func dragOutMenu(_ sender: UIButton){
-        setSideMenu()
-        setTitle()
-        setTableView()
-        self.tableView.reloadData()
-        background.frame = CGRect(x: 0, y: 0, width: 190, height: self.view.frame.height)
-        handler.frame = CGRect(x: 190, y: 0, width: 200, height: self.view.frame.height)
-        setDragInButton()
-        dragOutButton.frame = CGRect(x: 200, y: (self.view.frame.height) - 233, width: 50, height: 65)
-        dragInButton.frame = CGRect(x: 200, y: (self.view.frame.height) - 233, width: 50, height: 65)
-        dragOutButton.isHidden = true
-        dragInButton.isHidden = false
-        shadowWhenDragedOut(isTurnedOn: true)
-        tabBarController?.tabBar.isHidden = true
+    @objc func didTappedDragOutMenu(_ sender: UIButton){
+        dragOutMenu()
     }
 
-    @objc private func dragInMenu(_ sender: UIButton){
-        background.frame = CGRect(x: -190, y: 0, width: 190, height: self.view.frame.height)
-        handler.frame = CGRect(x: 0, y: 0, width: 200, height: self.view.frame.height)
-        dragOutButton.frame = CGRect(x: 10, y: (self.view.frame.height) - 233, width: 50, height: 65)
-        dragInButton.frame = CGRect(x: 10, y: (self.view.frame.height) - 233, width: 50, height: 65)
-        dragInButton.isHidden = true
-        dragOutButton.isHidden = false
-        shadowWhenDragedOut(isTurnedOn: false)
-        tabBarController?.tabBar.isHidden = false
+    @objc private func didTappedDragInMenu(_ sender: UIButton){
+        dragInMenu()
     }
     
     
@@ -68,7 +49,7 @@ class SideMenuViewController: UIViewController {
         self.view.addSubview(handler)
         handler.contentMode = .bottomLeft
         handler.image = UIImage(named: "sideMenu")
-        handler.frame = CGRect(x: 0, y: 0, width: 200, height: self.view.frame.height)
+        handler.frame = CGRect(x: -10, y: 0, width: 200, height: self.view.frame.height)
     }
 
     //  Buttons ---------------------------------------------------------------------------------------
@@ -76,17 +57,44 @@ class SideMenuViewController: UIViewController {
         self.view.addSubview(dragOutButton)
         dragOutButton.setImage(.init(systemName: "chevron.right"), for: .normal)
         dragOutButton.tintColor = .white
-        dragOutButton.frame = CGRect(x: 10, y: (self.view.frame.height) - 233, width: 50, height: 65)
+        dragOutButton.frame = CGRect(x: 2, y: (self.view.frame.height) - 233, width: 50, height: 65)
     }
     
     private func setDragInButton(){
         self.view.addSubview(dragInButton)
         dragInButton.setImage(.init(systemName: "chevron.left"), for: .normal)
         dragInButton.tintColor = .white
-        dragInButton.frame = CGRect(x: 10, y: (self.view.frame.height) - 233, width: 50, height: 65)
+        dragInButton.frame = CGRect(x: 2, y: (self.view.frame.height) - 233, width: 50, height: 65)
     }
     //  ------------------------------------------------------------------------------------------------
 
+    private func dragOutMenu(){
+        setSideMenu()
+        setTitle()
+        setTableView()
+        self.tableView.reloadData()
+        background.frame = CGRect(x: 0, y: 0, width: 190, height: self.view.frame.height)
+        handler.frame = CGRect(x: 180, y: 0, width: 200, height: self.view.frame.height)
+        setDragInButton()
+        dragOutButton.frame = CGRect(x: 188, y: (self.view.frame.height) - 233, width: 50, height: 65)
+        dragInButton.frame = CGRect(x: 188, y: (self.view.frame.height) - 233, width: 50, height: 65)
+        dragOutButton.isHidden = true
+        dragInButton.isHidden = false
+        shadowWhenDragedOut(isTurnedOn: true)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
+    private func dragInMenu(){
+        background.frame = CGRect(x: -190, y: 0, width: 190, height: self.view.frame.height)
+        handler.frame = CGRect(x: -10, y: 0, width: 200, height: self.view.frame.height)
+        dragOutButton.frame = CGRect(x: 2, y: (self.view.frame.height) - 233, width: 50, height: 65)
+        dragInButton.frame = CGRect(x: 2, y: (self.view.frame.height) - 233, width: 50, height: 65)
+        dragInButton.isHidden = true
+        dragOutButton.isHidden = false
+        shadowWhenDragedOut(isTurnedOn: false)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     
     //  Title
     private func setTitle(){
@@ -115,14 +123,15 @@ class SideMenuViewController: UIViewController {
     
     // TableView
     private func setTableView(){
-       tableView.rowHeight = 252
-       tableView.backgroundColor = .clear
-       tableView.separatorStyle = .none
-       tableView.dataSource = self
-       tableView.showsVerticalScrollIndicator = false
-       tableView.register(SideMenuTableViewCell.self, forCellReuseIdentifier: "sideMenuCell")
-       self.background.addSubview(tableView)
-       tableView.frame = CGRect(x: 10, y: 160, width: (self.background.frame.width) - 20, height: (self.background.frame.height) - 160)
+        tableView.rowHeight = 252
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.showsVerticalScrollIndicator = false
+        tableView.register(SideMenuTableViewCell.self, forCellReuseIdentifier: "sideMenuCell")
+        self.background.addSubview(tableView)
+        tableView.frame = CGRect(x: 10, y: 160, width: (self.background.frame.width) - 20, height: (self.background.frame.height) - 160)
     }
 }
 
@@ -140,6 +149,7 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
         DispatchQueue.main.async {
+//            cell.setBackgroundForCell(contentView: contentView)
             cell.setNameOfDrink(contentView: contentView)
             cell.setImageOfDrink(contentView: contentView)
         }
@@ -147,6 +157,15 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nameOfDrink.text = drinks.name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sheet = storyboard.instantiateViewController(withIdentifier: "orderSheetViewController") as! OrderSheetViewController
+        let data = DataManager.shared.sideMenuDrinks[indexPath.item]
+        sheet.set(data: (image: data.image, name: data.name, price: data.price))
+        dragInMenu()
+        present(sheet, animated: true, completion: nil)
     }
 }
 
@@ -159,7 +178,7 @@ extension SideMenuViewController: UIGestureRecognizerDelegate {
     }
     
     @objc func dismissSideMenu(_ sender: UIButton){
-        dragInMenu(sender)
+        dragInMenu()
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {

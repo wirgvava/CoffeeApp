@@ -17,7 +17,6 @@ class PresenterManager {
         case onboarding
         case emailConfirmPage
         case resetPasswordPage
-        case orderPage
     }
 
     func navigate(to vc: VC){
@@ -32,8 +31,6 @@ class PresenterManager {
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "confirmationPageViewController")
         case .resetPasswordPage:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "resetPasswordViewController")
-        case .orderPage:
-            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "orderViewController")
         }
        
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,

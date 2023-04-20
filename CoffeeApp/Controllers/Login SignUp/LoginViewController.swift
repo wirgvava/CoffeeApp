@@ -54,6 +54,8 @@ class LoginViewController: UIViewController {
     
     private func checkFieldsBeforeSignIn(){
         if emailTextField.text == "" || passwordTextField.text == "" {
+            emailTextFieldUnderscore.shake()
+            passwordTextFieldUnderscore.shake()
             errorMessage.isHidden = false
             errorMessage.text = "Looks like you missed something."
         } else {
@@ -70,6 +72,8 @@ class LoginViewController: UIViewController {
             if let error = error {
                 self.errorMessage.isHidden = false
                 self.errorMessage.text = "\(error.localizedDescription)"
+                self.emailTextFieldUnderscore.shake()
+                self.passwordTextFieldUnderscore.shake()
                 return
             }
             
@@ -79,6 +83,8 @@ class LoginViewController: UIViewController {
                 UserDefaults.standard.set(true, forKey: "userIsLoggedIn")
                 PresenterManager.shared.navigate(to: .mainTabBarController)
             } else {
+                self.emailTextFieldUnderscore.shake()
+                self.passwordTextFieldUnderscore.shake()
                 self.errorMessage.isHidden = false
                 self.errorMessage.text = "Incorrect password or email address."
             }
